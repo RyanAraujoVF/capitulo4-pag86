@@ -1,20 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package idadedapessoa.questão9;
 
-/**
- *
- * @author Sandro3
- */
+import javax.swing.JOptionPane;
+
+
 public class IdadeDaPessoaQuestão9 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
     
+    public static void main(String[] args) {
+    
+        int idade;
+              
+        idade = Integer.parseInt(JOptionPane.showInputDialog("Digite a idade da pessoa:"));
+                
+        if (idade >= 18) 
+        {
+            JOptionPane.showMessageDialog(null, "VOCÊ É MAIOR DE IDADE");
+        } 
+        else 
+        {          
+            int anosFaltam = 18 - idade;
+            JOptionPane.showMessageDialog(null, "VOCÊ É MENOR DE IDADE AINDA FALTAM " + anosFaltam + " ANOS PARA SER MAIOR");
+        }
+    }
 }
