@@ -1,20 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package mediadasnotas.questão7;
 
-/**
- *
- * @author Sandro3
- */
+import javax.swing.JOptionPane;
+
+
 public class MediaDasNotasQuestão7 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
     
+    public static void main(String[] args) {
+     
+        double nota1, nota2, nota3, nota4, media;
+        
+        nota1 = Double.parseDouble(JOptionPane.showInputDialog("Digite a primeira nota:"));
+        nota2 = Double.parseDouble(JOptionPane.showInputDialog("Digite a segunda nota:"));
+        nota3 = Double.parseDouble(JOptionPane.showInputDialog("Digite a terceira nota:"));
+        nota4 = Double.parseDouble(JOptionPane.showInputDialog("Digite a quarta nota:"));
+        
+        media = (nota1 + nota2 + nota3 + nota4) / 4;
+         
+        JOptionPane.showMessageDialog(null, "A média das notas é: " + media);
+        if (media >= 6) 
+        {        
+            JOptionPane.showMessageDialog(null, "O aluno foi aprovado!");
+        } 
+        else 
+        {
+            JOptionPane.showMessageDialog(null, "O aluno foi reprovado!");
+        }
+    }
 }
